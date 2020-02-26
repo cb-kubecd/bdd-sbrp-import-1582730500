@@ -1,0 +1,227 @@
+
+Showing logs for build [32mcb-kubecd-bdd-sbrp-import-15827-r22dp-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-5ckgl[0m
+{"level":"warn","ts":1582730630.997303,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582730630.9982038,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-bdd-sbrp-import-15827-r22dp-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-k64xj[0m
+{"level":"warn","ts":1582730632.7687862,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1582730632.770282,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mcb-kubecd-bdd-sbrp-import-15827-r22dp-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcb-kubecd-bdd-sbrp-import-15827-r22dp-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-bdd-sbrp-import-15827-r22dp-ss2sr[0m
+{"level":"warn","ts":1582730749.0771203,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1582730750.4268928,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/cb-kubecd/bdd-sbrp-import-1582730500.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-bdd-sbrp-import-15827-r22dp-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:f8a46ba71e98d3f5fd2f57da467e510d9fedf7e3
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mcb-kubecd-bdd-sbrp-import-15827-r22dp-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mcb-kubecd-bdd-sbrp-import-15827-r22dp-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----< com.github.jenkinsx.quickstarts:bdd-sbrp-import-1582730500 >-----
+[INFO] Building spring-boot-rest-prometheus 0.0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ bdd-sbrp-import-1582730500 ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ bdd-sbrp-import-1582730500 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ bdd-sbrp-import-1582730500 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /workspace/source/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ bdd-sbrp-import-1582730500 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /workspace/source/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ bdd-sbrp-import-1582730500 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /workspace/source/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ bdd-sbrp-import-1582730500 ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests
+15:26:22.294 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests]
+15:26:22.344 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+15:26:22.357 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+15:26:22.467 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+15:26:22.520 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests], using SpringBootContextLoader
+15:26:22.550 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests]: class path resource [com/github/jenkinsx/quickstarts/springboot/rest/prometheus/RestPrometheusApplicationTests-context.xml] does not exist
+15:26:22.552 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests]: class path resource [com/github/jenkinsx/quickstarts/springboot/rest/prometheus/RestPrometheusApplicationTestsContext.groovy] does not exist
+15:26:22.553 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+15:26:22.555 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests]: RestPrometheusApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+15:26:22.763 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests]
+15:26:23.070 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/workspace/source/target/classes/com/github/jenkinsx/quickstarts/springboot/rest/prometheus/RestPrometheusApplication.class]
+15:26:23.082 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplication for test class com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests
+15:26:23.378 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests]: using defaults.
+15:26:23.379 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+15:26:23.396 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+15:26:23.397 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+15:26:23.398 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@619713e5, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@708f5957, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@68999068, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7722c3c3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2ef3eef9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@243c4f91, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@291ae, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@61df66b6, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@50eac852, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@16ec5519]
+15:26:23.401 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests]
+15:26:23.401 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests]
+15:26:23.403 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests]
+15:26:23.403 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests]
+15:26:23.404 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests]
+15:26:23.404 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests]
+15:26:23.409 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@1d9b7cce testClass = RestPrometheusApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@4d9e68d0 testClass = RestPrometheusApplicationTests, locations = '{}', classes = '{class com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@56aac163, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@396f6598, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@57e1b0c, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@480bdb19], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+15:26:23.411 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests]
+15:26:23.443 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests]
+15:26:23.480 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.2.RELEASE)
+
+2020-02-26 15:26:24.767  INFO 69 --- [           main] j.q.s.r.p.RestPrometheusApplicationTests : Starting RestPrometheusApplicationTests on cb-kubecd-bdd-sbrp-import-15827-r22dp-1-from-build-pack-5gf7c-p with PID 69 (started by root in /workspace/source)
+2020-02-26 15:26:24.778  INFO 69 --- [           main] j.q.s.r.p.RestPrometheusApplicationTests : No active profile set, falling back to default profiles: default
+2020-02-26 15:26:35.572  INFO 69 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-26 15:26:38.580  INFO 69 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-26 15:26:39.260  INFO 69 --- [           main] j.q.s.r.p.RestPrometheusApplicationTests : Started RestPrometheusApplicationTests in 15.716 seconds (JVM running for 18.502)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.943 s - in com.github.jenkinsx.quickstarts.springboot.rest.prometheus.RestPrometheusApplicationTests
+2020-02-26 15:26:39.956  INFO 69 --- [       Thread-4] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ bdd-sbrp-import-1582730500 ---
+[INFO] Building jar: /workspace/source/target/bdd-sbrp-import-1582730500-0.0.1.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.2.RELEASE:repackage (repackage) @ bdd-sbrp-import-1582730500 ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ bdd-sbrp-import-1582730500 ---
+[INFO] Installing /workspace/source/target/bdd-sbrp-import-1582730500-0.0.1.jar to /home/jenkins/.mvnrepository/com/github/jenkinsx/quickstarts/bdd-sbrp-import-1582730500/0.0.1/bdd-sbrp-import-1582730500-0.0.1.jar
+[INFO] Installing /workspace/source/pom.xml to /home/jenkins/.mvnrepository/com/github/jenkinsx/quickstarts/bdd-sbrp-import-1582730500/0.0.1/bdd-sbrp-import-1582730500-0.0.1.pom
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ bdd-sbrp-import-1582730500 ---
+[INFO] Using alternate deployment repository local-nexus::default::http://nexus/repository/maven-releases/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  50.784 s
+[INFO] Finished at: 2020-02-26T15:26:46Z
+[INFO] ------------------------------------------------------------------------
+
+Showing logs for build [32mcb-kubecd-bdd-sbrp-import-15827-r22dp-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
+v1.0.1
+
+Showing logs for build [32mcb-kubecd-bdd-sbrp-import-15827-r22dp-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image openjdk:8-jdk-slim    
+ERROR: logging before flag.Parse: E0226 15:26:47.930012      11 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0226 15:26:47.936918      11 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2020/02/26 15:26:47 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Error while retrieving image from cache: getting file info: stat /workspace/sha256:f3866dd8be6d27d0e09ed483cf0ffb3b3c21e76ccd766b3a4b629a43cae9c94c: no such file or directory 
+[36mINFO[0m[0001] Downloading base image openjdk:8-jdk-slim    
+2020/02/26 15:26:49 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0002] cmd: EXPOSE                                  
+[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0002] Using files from context: [/workspace/source/pom.xml] 
+[36mINFO[0m[0002] Using files from context: [/workspace/source/target/bdd-sbrp-import-1582730500-0.0.1.jar] 
+[36mINFO[0m[0002] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0002] Taking snapshot of full filesystem...        
+[36mINFO[0m[0002] ENV PORT 8080                                
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] ENV CLASSPATH /opt/lib                       
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] EXPOSE 8080                                  
+[36mINFO[0m[0002] cmd: EXPOSE                                  
+[36mINFO[0m[0002] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] Using files from context: [/workspace/source/pom.xml] 
+[36mINFO[0m[0002] COPY pom.xml target/lib* /opt/lib/           
+[36mINFO[0m[0002] Taking snapshot of files...                  
+[36mINFO[0m[0002] Using files from context: [/workspace/source/target/bdd-sbrp-import-1582730500-0.0.1.jar] 
+[36mINFO[0m[0002] COPY target/*.jar /opt/app.jar               
+[36mINFO[0m[0002] Taking snapshot of files...                  
+[36mINFO[0m[0002] WORKDIR /opt                                 
+[36mINFO[0m[0002] cmd: workdir                                 
+[36mINFO[0m[0002] Changed working directory to /opt            
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0002] CMD ["java", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap", "-jar", "app.jar"] 
+[36mINFO[0m[0002] No files changed in this command, skipping snapshotting. 
+2020/02/26 15:26:51 existing blob: sha256:6dc6df7db36a5a1267aa98ac410ecdbf10e39333a934539ecbc78a1283016206
+2020/02/26 15:26:51 existing blob: sha256:d1d06863bb82bdc3f4cd17d49c0dee8720f91c4d9e40cce1b4a691f9459266be
+2020/02/26 15:26:51 existing blob: sha256:4836bf357bc05fde276db1412eb17d9c5ae12fc0751947bd3cbef5879f5ee955
+2020/02/26 15:26:51 existing blob: sha256:bc51dd8edc1b1132bb97827ed6bd16aac332b03fb03d4c02d2088067a5fbb499
+2020/02/26 15:26:54 pushed blob: sha256:e1daa7366ea1d8d28e3429a5e6d81955e3dac8117569402ab8e7f968cb414de4
+2020/02/26 15:26:54 pushed blob: sha256:c7cfc09465c7d49c032d7ff560c1f52b4a190c4d99425afc3b25bb18302528b9
+2020/02/26 15:26:55 pushed blob: sha256:74f269df08a8f5d8f233fa81ac779a5b5002cdb4aebafd3e739b9a4e8228ab47
+2020/02/26 15:26:56 gcr.io/jenkins-x-bdd3/bdd-sbrp-import-1582730500:0.0.1: digest: sha256:bd1794f294a1138edf1afd9757a4544e018d205e03205bcdd9b9d5da4910cc82 size: 1244
+
+Showing logs for build [32mcb-kubecd-bdd-sbrp-import-15827-r22dp-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mcb-kubecd-bdd-sbrp-import-15827-r22dp-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/bdd-sbrp-import-1582730500 to an unshallow repository
+Generating change log from git ref 15977b4131e7df5dde9d6f96b518704f768fd029 => fd82ab593f691ee9065196a6252195479c2858be
+Associating user x-0 in users.jenkins.io with email c**d-bot@cloudbees.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit f8a46ba71e98d3f5fd2f57da467e510d9fedf7e3 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email c**d-bot@cloudbees.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit f8a46ba71e98d3f5fd2f57da467e510d9fedf7e3 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+Associating user x-0 in users.jenkins.io with email c**d-bot@cloudbees.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 6bddb70793e7f2391273f18c1158d53cedf80fd4 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email c**d-bot@cloudbees.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 6bddb70793e7f2391273f18c1158d53cedf80fd4 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+WARNING: No release found for cb-kubecd/bdd-sbrp-import-1582730500 and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/cb-kubecd/bdd-sbrp-import-1582730500/releases/tag/v0.0.1
+generated: /workspace/source/charts/bdd-sbrp-import-1582730500/templates/release.yaml
+Created Release bdd-sbrp-import-1582730500-0-0-1 resource in namespace **
+Updating PipelineActivity cb-kubecd-bdd-sbrp-import-1582730500-master-1 with version 0.0.1
+Updated PipelineActivities cb-kubecd-bdd-sbrp-import-1582730500-master-1 with release notes URL: https://github.com/cb-kubecd/bdd-sbrp-import-1582730500/releases/tag/v0.0.1
+
+Showing logs for build [32mcb-kubecd-bdd-sbrp-import-15827-r22dp-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for https://storage.googleapis.com/chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://jenkins-x-chartmuseum:8080 from vault helm/repos
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file bdd-sbrp-import-1582730500-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mcb-kubecd-bdd-sbrp-import-15827-r22dp-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app bdd-sbrp-import-1582730500 version 0.0.1 to namespace **-staging
+WARNING: 
+Created Pull Request: https://github.com/cb-kubecd/environment-pr-166-37-boot-gke-staging/pull/5
+Added label updatebot to Pull Request https://github.com/cb-kubecd/environment-pr-166-37-boot-gke-staging/pull/5
+got git provider status pending from PR https://github.com/cb-kubecd/environment-pr-166-37-boot-gke-staging/pull/5
+got git provider status pending from PR https://github.com/cb-kubecd/environment-pr-166-37-boot-gke-staging/pull/5
+got git provider status pending from PR https://github.com/cb-kubecd/environment-pr-166-37-boot-gke-staging/pull/5
+got git provider status pending from PR https://github.com/cb-kubecd/environment-pr-166-37-boot-gke-staging/pull/5
+got git provider status pending from PR https://github.com/cb-kubecd/environment-pr-166-37-boot-gke-staging/pull/5
+got git provider status pending from PR https://github.com/cb-kubecd/environment-pr-166-37-boot-gke-staging/pull/5
+got git provider status pending from PR https://github.com/cb-kubecd/environment-pr-166-37-boot-gke-staging/pull/5
+Pull Request https://github.com/cb-kubecd/environment-pr-166-37-boot-gke-staging/pull/5 is merged at sha 42aa1b76e8b67f9973c7df2e24cd79458d5b2ce9
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names bdd-sbrp-import-1582730500, **-bdd-sbrp-import-1582730500, **-staging-bdd-sbrp-import-1582730500
